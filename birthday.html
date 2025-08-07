@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #ffcccc, #ffe6cc);
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    h1 {
+      font-size: 3em;
+      animation: bounce 1s infinite;
+      color: #ff4081;
+    }
+    #message {
+      display: none;
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #444;
+      animation: fadeIn 2s forwards;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin-top: 30px;
+      cursor: pointer;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px #cc3366;
+    }
+    button:hover { background-color: #e6005c; }
+    button:active {
+      box-shadow: none;
+      transform: translateY(4px);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .confetti {
+      font-size: 2em;
+      animation: float 2s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="confetti">🎉🎈🎊</div>
+  <h1>Happy Birthday!</h1>
+  <button onclick="revealMessage()">Open Message</button>
+  <div id="message">
+    <p>Wishing you a day filled with love, laughter, and cake! 🎂🎉</p>
+    <p>May all your dreams come true this year. 🥳✨</p>
+  </div>
+
+  <!-- Audio element with working online source -->
+  <audio id="birthdaySong" src="https://www.orangefreesounds.com/wp-content/uploads/2016/06/Happy-birthday-song.mp3"></audio>
+
+  <script>
+    function revealMessage() {
+      document.getElementById("message").style.display = "block";
+      document.getElementById("birthdaySong").play();
+    }
+  </script>
+</body>
+</html>
+

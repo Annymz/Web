@@ -2,66 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday!</title>
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
       background: linear-gradient(to bottom right, #ffcccc, #ffe6cc);
       text-align: center;
-      padding: 50px;
+      padding: 5vh 5vw;
       color: #333;
     }
+
     h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       animation: bounce 1s infinite;
       color: #ff4081;
+      margin-bottom: 1em;
     }
+
     #message {
       display: none;
-      font-size: 1.5em;
-      margin-top: 20px;
+      font-size: 1.2em;
+      margin-top: 1.5em;
       color: #444;
       animation: fadeIn 2s forwards;
     }
+
     button {
-      padding: 15px 30px;
-      font-size: 1.2em;
-      margin-top: 30px;
+      padding: 1em 2em;
+      font-size: 1em;
+      margin-top: 2em;
       cursor: pointer;
       background-color: #ff4081;
       color: white;
       border: none;
       border-radius: 10px;
       box-shadow: 0 5px #cc3366;
+      width: 90%;
+      max-width: 300px;
     }
+
     button:hover { background-color: #e6005c; }
+
     button:active {
       box-shadow: none;
       transform: translateY(4px);
     }
+
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
+
     @keyframes fadeIn {
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
+
     .confetti {
-      font-size: 2em;
+      font-size: 1.8em;
       animation: float 2s infinite;
     }
+
     @keyframes float {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      button {
+        font-size: 1em;
+        padding: 0.8em 1.5em;
+      }
+
+      #message {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
   <div class="confetti">🎉🎈🎊</div>
   <h1>Happy Birthday!</h1>
+  <p>Click below to reveal your surprise 🎁</p>
   <button onclick="revealMessage()">Open Message</button>
+
   <div id="message">
     <p>Wishing you a day filled with love, laughter, and cake! 🎂🎉</p>
     <p>May all your dreams come true this year. 🥳✨</p>
@@ -78,4 +109,3 @@
   </script>
 </body>
 </html>
-
